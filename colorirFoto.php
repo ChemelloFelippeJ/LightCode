@@ -88,11 +88,10 @@ if(count($_POST) > 0) {
         exit;
     }
 
-//COLORIR IMAGEM
+    /COLORIR IMAGEM
     require_once 'vendor/autoload.php';
-    require_once '../credentials/algorithmia.json';
+//    require_once '../credentials/algorithmia.json';
     $urlImage = "https://" . $_SERVER[HTTP_HOST] . "/" . $urlImage;
-    var_dump($urlImage);
 
     $json = '{"image": "'. $urlImage . '"}';
     $input = json_decode($json);
@@ -104,6 +103,9 @@ if(count($_POST) > 0) {
     $client = Algorithmia::client($apiKey->apiKey);
     $algo = $client->algo("deeplearning/ColorfulImageColorization/1.1.13");
     $retorno = $algo->pipe($input)->result;
+
+    var_dump($retorno);
+
 
 
 
