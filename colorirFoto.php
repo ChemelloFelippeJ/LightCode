@@ -35,7 +35,6 @@
 
 
 <?php
-var_dump($_POST);
 if(count($_POST) > 0) {
 
 //UPLOAD IMAGEM
@@ -82,6 +81,7 @@ if(count($_POST) > 0) {
 // Upload efetuado com sucesso, exibe uma mensagem e um link para o arquivo
         echo "Upload efetuado com sucesso!";
         $urlImage = $_UP['pasta'] . $nome_final;
+        var_dump($urlImage);
     } else {
 // Não foi possível fazer o upload, provavelmente a pasta está incorreta
         echo "Não foi possível enviar o arquivo, tente novamente";
@@ -90,12 +90,26 @@ if(count($_POST) > 0) {
 
 //COLORIR IMAGEM
     require_once 'vendor/autoload.php';
+    require_once '../credentials/algorithmia.json';
+    $urlImage = "https://" . $_SERVER[HTTP_HOST] . "/" . $urlImage;
+    var_dump($urlImage);
 
-    $input = json_decode('{
-        "image": ${urlImage}
-    }');
-var_dump($input);
-    die();
+    $json = '{"image": "'. $urlImage . '"}';
+    $input = json_decode($json);
+
+    $apiKeyJSON = file_get_contents("../credentials/algorithmia.json");
+
+    $apiKey = json_decode($apiKeyJSON);
+
+    $client = Algorithmia::client($apiKey->apiKey);
+    $algo = $client->algo("deeplearning/ColorfulImageColorization/1.1.13");
+    $retorno = $algo->pipe($input)->result;
+
+
+
+
+
+
 
 }
 ?>
