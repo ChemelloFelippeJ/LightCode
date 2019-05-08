@@ -29,6 +29,7 @@
 <form method="post" action="#" enctype="multipart/form-data">
     <label>Arquivo:</label>
     <input type="file" name="arquivo" />
+    <input type="hidden" id="foi" name="foi" value="1">
     <input type="submit" value="Enviar" />
 </form>
 
