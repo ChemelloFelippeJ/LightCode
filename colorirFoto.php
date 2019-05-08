@@ -88,7 +88,7 @@ if(count($_POST) > 0) {
         exit;
     }
 
-    /COLORIR IMAGEM
+    //COLORIR IMAGEM
     require_once 'vendor/autoload.php';
 //    require_once '../credentials/algorithmia.json';
     $urlImage = "https://" . $_SERVER[HTTP_HOST] . "/" . $urlImage;
