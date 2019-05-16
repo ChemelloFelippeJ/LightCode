@@ -1,4 +1,4 @@
-curl -X POST -u "apikey:8w_K02s9oDd-TH3DxPRSxxuwRFHn4ldhOvNWsnvOWtFq" \
+curl -X POST -u "apikey:APIKEY" \
 --header "Content-Type: application/json" \
 --data "{\"text\":\"Maçã, colchão, caça\"}" \
 --output export.ogg \
