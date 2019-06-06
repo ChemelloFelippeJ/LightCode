@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet">
+
+    <title>Naval Battle</title>
+
+    <style>
+        #tableCanvas {
+            margin: 10px;
+        }
+
+        table {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            width: 10px;
+        }
+
+        tr {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            height: 10px;
+        }
+
+
+        .water {
+            background-color: blue;
+        }
+
+        .boat {
+            background-color: gray;
+        }
+
+        .shot {
+            background-color: black;
+        }
+
+        .fire {
+            background-color: red;
+        }
+
+        .predict {
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand" href="#">LightCode</a>
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../colorirFoto.php">Colorir Foto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../naval-battle/index.html">Batalha Naval</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../caesar-cipher/index.html">Cifra de Cesar</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div>
+    <h1>Batalha Naval</h1>
+    <p>Jogo de batalha naval contra o computador</p>
+    <p>Ainda não foi implementado "Computador contra pessoa"</p>
+</div>
+<div id="tableCanvas"></div>
+<div>
+    <input onclick="start()" type="button" value="Iniciar Jogo">
+    <input onclick="shot()" type="button" value="Atirar">
+    <input onclick="shotAi()" type="button" value="IA Atirar">
+    <input onclick="autoPlay()" type="button" value="Auto Play">
+    <input onclick="selectBoatPositions()" type="button" value="Selecionar Posição dos Barcos">
+    <div id="sendButton"></div>
+    <div id="counter"></div>
+</div>
+<script src="js.js"></script>
+</body>
+</html>
