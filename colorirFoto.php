@@ -22,6 +22,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="colorirFoto.php">Colorir Foto</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="naval-battle/index.html">Batalha Naval</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="caesar-cipher/index.html">Cifra de Cesar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="fibonacci-sequence/index.html">Sequencia de Fibonacci</a>
+            </li>
         </ul>
     </div>
 </nav>
