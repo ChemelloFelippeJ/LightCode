@@ -35,6 +35,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="../fibonacci-sequence/index.html">Sequencia de Fibonacci</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculadora-hora-trabalho/index.php">Calculadora Trabalho</a>
+            </li>
         </ul>
     </div>
 </nav>
